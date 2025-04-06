@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Layout */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.section {
+  flex: 1 1 calc(100% - 2rem); /* Default: Full width minus padding */
+  max-width: 100%;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Grid Layout for Services Section */
+#services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#services ul {
+  list-style: none;
+  padding: 0;
+}
+
+#services li {
+  background-color: #eaeaea;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .section {
+    flex: 1 1 calc(48% - 2rem); /* Two columns on tablets */
+    max-width: 48%;
+  }
+
+  #services {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for services */
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    flex: 1 1 calc(23% - 2rem); /* Four columns on desktops */
+    max-width: 23%;
+  }
+
+  #services {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for services */
+  }
+}
